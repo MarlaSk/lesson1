@@ -1,22 +1,13 @@
-const person = {};
+import { demonstrateOperations, removeProperty, addProperty, compare } from './objects.js';
 
-// Добавление поля age
-// { age: 10 }
-person.age = 10;
-console.log(person);
+const user1 = { id: 1, age: 20, name: 'alex' };
+const user2 = { id: 5, name: 'max' };
+const user3 = { id: 90, name: 'stas', address: 0 };
 
-// Добавление поля nick
-// { age: 10, nick: 'nickname' }
-person.nick = 'nickname';
-console.log(person);
-
-// Удаление поля age
-// { nick: 'nickname' }
-delete person.age;
-console.log(person);
-
-// Переопределение значения поля nick
-// { nick: 'new_nick' }
-person.nick = 'new_nick';
-
-console.log(person);
+demonstrateOperations();
+removeProperty(user1, 'id');
+addProperty(user2, 'id', -3);
+console.log(user1);
+console.log(user2);
+compare(user3, { id: 80 }, 'id');
+compare(user3, { id: 90 }, 'id');
