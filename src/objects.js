@@ -63,3 +63,27 @@ export const compare = (obj1, obj2, key) => {
     );
   }
 };
+
+const list = ['Молоко', 'Хлеб', 'Картошка', 'Капустка', 'Сок'];
+
+list.push('Ветчина');
+list.push('Помидоры');
+list.push('Огурцы');
+
+list.pop();
+let res = 'ве';
+let a = 'тч';
+res += a;
+a = 'ина';
+res += a;
+console.log(list.includes(res));
+
+res = ''.repeat(res.length);
+a = 'ок';
+res += a;
+a = ['с'];
+res = a[0].toUpperCase() + res;
+
+console.log(list.indexOf(res));
+//уточнить
+console.log(list[list.length - 1].length * 3);
