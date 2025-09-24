@@ -1,6 +1,16 @@
 import { demonstrateOperations, removeProperty, addProperty, compare } from './objects.js';
 import { add, getRandomItem, logJoin, setNickname } from './array.js';
-import { countNumber, filter, func } from './loops.js';
+import {
+  colorOutput,
+  compareArrays,
+  countNumber,
+  filter,
+  findAge,
+  func,
+  outputTable,
+  printColorOutput,
+  roundNumber,
+} from './loops.js';
 
 const user1 = { id: 1, age: 20, name: 'alex' };
 const user2 = { id: 5, name: 'max' };
@@ -51,3 +61,36 @@ const people = [
   { id: 30, name: 'Наталья', gender: 'f', age: 25 },
 ];
 console.log(filter(people));
+
+console.log(roundNumber([1.1, 2.2, -2, 3.3, -1, 5.5, 5.99, 7.49, 7.9999, -2.2, -3]));
+
+colorOutput(10);
+printColorOutput(user);
+
+const matrix = [
+  ['#', 'Имя', 'Возраст', 'Особые приметы'],
+  [90, 'Паша', 23],
+  [12, 'Артём', 29],
+  [33, 'Стас', 13, 'Сидит на хлебной диете'],
+  [54, 'Хабиб', 7],
+  [35, 'Алеша', 15, 'Любит ночевать на лавочке'],
+  [50, 'Лена', 19, 'Громко чихает'],
+  [83, 'Катя', 43],
+  [56, 'Алексей', 27, 'Мяукает во сне'],
+];
+outputTable(matrix);
+
+const users = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 25 },
+  { name: 'Diana', age: 35 },
+  { name: 'Eve', age: 30 },
+  { name: 'Frank', age: 28 },
+  { name: 'Grace', age: 25 },
+  { name: 'Hannah', age: 41 },
+  { name: 'Ivy', age: 30 },
+  { name: 'Jack', age: 28 },
+];
+findAge(users);
+compareArrays([], []);
