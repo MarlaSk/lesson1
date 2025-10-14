@@ -172,3 +172,43 @@
 // }
 //
 // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+// Напишите функцию, которая принимает в качестве аргумента массив строк и возвращает отсортированный массив,
+// содержащий те же строки, но в порядке от самой короткой к самой длинной.
+
+// function sortByLength(array) {
+//   return array.sort((a, b) => a.length - b.length);
+// }
+//
+// console.log(sortByLength(['Longer', 'Longest', 'Short']));
+
+//В этом задании вам нужно заменить каждую букву в строке на её порядковый номер в алфавите.
+// Если в тексте есть что-то, кроме букв, проигнорируйте это и не возвращайте.
+
+// function alphabetPosition(text) {
+//   const positions = [];
+//
+//   for (let i = 0; i < text.length; i++) {
+//     const char = text[i];
+//
+//     if (/[a-zA-Z]/.test(char)) {
+//       const position = char.toLowerCase().charCodeAt(0) - 96;
+//       positions.push(position);
+//     }
+//   }
+//   return positions.join(' ');
+// }
+//
+// console.log(alphabetPosition('The narwhal bacons at midnight.'));
+
+// function twoSum(numbers, target) {
+//   for (let i = 0; i < numbers.length; i++) {
+//     for (let j = i + 1; j < numbers.length; j++) {
+//       if (numbers[i] + numbers[j] === target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+// }
+//
+// console.log(twoSum([2, 2, 3], 4)); // [0, 1]
